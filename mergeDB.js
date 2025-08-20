@@ -1,8 +1,9 @@
+require("dotenv").config();
 const { MongoClient } = require("mongodb");
+const { MONGO_URI } = process.env;
 
 async function mergeDBs() {
-  const uri = "";
-  const client = new MongoClient(uri);
+  const client = new MongoClient(MONGO_URI);
 
   try {
     await client.connect();
