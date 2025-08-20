@@ -22,7 +22,7 @@ module.exports = async (sourceDbName, targetDbName) => {
       const docs = await sourceColl.find().toArray();
 
       if (docs.length === 0) {
-        console.log(`⚠️ No docs in ${name}, skipping...`);
+        console.log(`No docs in ${name}, skipping...`);
         continue;
       }
 
