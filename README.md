@@ -48,7 +48,6 @@ Duplicate `_id` records are automatically skipped, ensuring safe merging.
 
 ## 🛠 Example Output
 
-    ```bash
     Processing collection: users
     Merged 152 docs into users
     Processing collection: messages
@@ -57,6 +56,5 @@ Duplicate `_id` records are automatically skipped, ensuring safe merging.
 
 ## mongodb commands
 
-    ```bash
     mongodump --db=waGrpsAuto --out=C:\dbBckups
     mongorestore --db waGrpsAuto C:\dbBckups\db
