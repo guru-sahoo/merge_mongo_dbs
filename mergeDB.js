@@ -2,7 +2,7 @@ require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const { MONGO_URI } = process.env;
 
-async function mergeDBs(sourceDbName, targetDbName) {
+module.exports = async (sourceDbName, targetDbName) => {
   const client = new MongoClient(MONGO_URI);
 
   try {
@@ -43,6 +43,4 @@ async function mergeDBs(sourceDbName, targetDbName) {
     await client.close();
     console.log("MongoDB connection closed.");
   }
-}
-
-module.exports = mergeDBs;
+};
