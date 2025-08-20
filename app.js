@@ -1,8 +1,6 @@
-const express = require("express");
-const app = express();
-
+const app = require("express")();
 const mergeDBs = require("./mergeDB");
 
-mergeDBs("waGrpAuto1", "waGrpAuto");
+mergeDBs("waGrpsAuto1", "waGrpsAuto");
 
 app.listen(3000, () => console.log("Server running on port 3000"));
