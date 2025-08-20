@@ -2,14 +2,14 @@ require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const { MONGO_URI } = process.env;
 
-async function mergeDBs() {
+async function mergeDBs(sourceDbName, targetDbName) {
   const client = new MongoClient(MONGO_URI);
 
   try {
     await client.connect();
 
-    const sourceDB = client.db("waGrpsAuto1");
-    const targetDB = client.db("waGrpsAuto");
+    const sourceDB = client.db(sourceDbName);
+    const targetDB = client.db(targetDbName);
 
     const collections = await sourceDB.listCollections().toArray();
 
@@ -45,4 +45,4 @@ async function mergeDBs() {
   }
 }
 
-mergeDBs();
+module.exports = mergeDBs;
