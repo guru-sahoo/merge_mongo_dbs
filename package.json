@@ -1,0 +1,14 @@
+{
+  "name": "merge_db",
+  "version": "1.0.0",
+  "main": "mergeDB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guru Sahoo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.18.0"
+  }
+}
