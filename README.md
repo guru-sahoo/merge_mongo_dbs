@@ -29,19 +29,21 @@ Duplicate `_id` records are automatically skipped, ensuring safe merging.
 
    ```bash
    npm install
-
    ```
 
-3. Edit the database names and URI inside mergeDBs.js:
+3. Add MONGO_URI in .env
 
    ```bash
-   const uri = "mongodb://localhost:27017"; // MongoDB connection URI
-   const sourceDB = client.db("waGrpAuto1"); // Source DB
-   const targetDB = client.db("waGrpAuto");  // Target DB
-
+   MONGO_URI=YOUR-MONGODB-URI
    ```
 
-4. Run the script:
+4. Edit the database names inside app.js:
+
+   ```js
+   mergeDBs("waGrpsAuto1", "waGrpsAuto");
+   ```
+
+5. Run the script:
    ```bash
    node app.js
    ```
